@@ -1,26 +1,17 @@
-const pword = document.getElementById("pword");
+const pwd = document.getElementById("pwd");
 const confirm_pwd = document.getElementById("confirm-pwd");
 
-pword.addEventListener("input", (event) => {
-  if (pword.value != confirm_pwd.value) {
-    pword.classList.add("error");
+function validatePasswords() {
+  if (pwd.value != confirm_pwd.value) {
+    pwd.classList.add("error");
     confirm_pwd.classList.add("error");
-    pword.setCustomValidity("Passwords do not match");
+    pwd.setCustomValidity("Passwords do not match");
   } else {
-    pword.classList.remove("error");
+    pwd.classList.remove("error");
     confirm_pwd.classList.remove("error");
-    pword.setCustomValidity("");
+    pwd.setCustomValidity("");
   }
-});
+}
 
-confirm_pwd.addEventListener("input", (event) => {
-  if (pword.value != confirm_pwd.value) {
-    pword.classList.add("error");
-    confirm_pwd.classList.add("error");
-    pword.setCustomValidity("Passwords do not match");
-  } else {
-    pword.classList.remove("error");
-    confirm_pwd.classList.remove("error");
-    pword.setCustomValidity("");
-  }
-});
+pwd.addEventListener("input", validatePasswords);
+confirm_pwd.addEventListener("input", validatePasswords);
