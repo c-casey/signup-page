@@ -1,0 +1,165 @@
+@font-face {
+    font-family: "arconregular";
+    src: url("assets/fonts/arcon-regular-webfont.woff2") format("woff2"),
+         url("assets/fonts/arcon-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 0;
+    font-family: "arconregular";
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex: 1 4 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("assets/images/waves.jpg");
+    background-size: cover;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-top: 35%;
+}
+
+.logo {
+    width: 8rem;
+}
+
+.attribution {
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.attribution > a {
+    color: white;
+}
+
+.title {
+    align-self: flex-end;
+}
+
+.content-container {
+    display: flex;
+    flex: 1 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.paragraph-container {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    background-color: #f5f1f0;
+    font-size: 24px;
+}
+
+.paragraph-container > p {
+    margin: 3rem;
+    max-width: 45rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 3rem;
+}
+
+form {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 3rem;
+    grid-template-rows: 3rem 3rem 3rem;
+    grid-template-columns: minmax(10rem, 20rem) minmax(10rem, 20rem);
+}
+
+form > p {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+}
+
+input {
+    appearance: none;
+    height: 5rem;
+    padding: 8px;
+    border: solid #ccc 1px;
+    border-radius: 6px;
+}
+
+input:focus {
+    appearance: none;
+    outline: none;
+    border-color: cornflowerblue;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error {
+    border-color: darkred;
+    position: relative;
+}
+
+input.error + span::after {
+    content: "* Passwords do not match";
+    color: darkred;
+    position: absolute;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    background-color: #f5f1f0;
+    box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.2) inset;
+}
+
+ion-icon {
+    font-size: 10rem;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.button {
+    max-width: 15rem;
+    height: 3rem;
+    margin: 3rem;
+    border: none;
+    border-radius: 8px;
+    background-color: darkcyan;
+    color: white;
+    font-weight: bold;
+}
+
+.login {
+    margin: 0;
+    padding-left: 3rem;
+}
