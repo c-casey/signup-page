@@ -7,6 +7,7 @@
     <title>Sign-up Form</title>
     <meta name="description" content="Sign up for this very important thing!" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="assets/validation.js" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -25,36 +26,36 @@
         </div>
         <div class="form-container">
           <h1>Let's do this!</h1>
-          <form>
+          <form id="signup">
             <p>
               <label for="fname">FIRST NAME</label>
-              <input name="fname" type="text" id="fname" />
+              <input name="fname" type="text" id="fname" required />
             </p>
             <p>
               <label for="lname">LAST NAME</label>
-              <input name="lname" type="text" id="lname" />
+              <input name="lname" type="text" id="lname" required />
             </p>
             <p>
               <label for="email">EMAIL</label>
-              <input name="email" type="email" id="email" />
+              <input name="email" type="email" id="email" required />
             </p>
             <p>
               <label for="phone">PHONE NUMBER</label>
-              <input name="phone" type="tel" id="phone" />
+              <input name="phone" type="tel" id="phone" pattern="[0-9]{3}[\-\s]?[0-9]{3}[\-\s]?[0-9]{4}" title="Please enter your 10-digit phone number (e.g. 1234567890, 123 456 7890, 123-456-7890)" required />
             </p>
             <p>
               <label for="pword">PASSWORD</label>
-              <input name="pword" type="password" id="pword" class="error" />
+              <input name="pword" type="password" id="pword" required />
               <span></span>
             </p>
             <p>
               <label for="pword">CONFIRM PASSWORD</label>
-              <input name="confirm-pwd" type="password" id="confirm-pwd" class="error" />
+              <input name="confirm-pwd" type="password" id="confirm-pwd" required />
             </p>
           </form>
         </div>
         <div class="button-container">
-          <button class="button">Create Account</button>
+          <button class="button" form="signup">Create Account</button>
           <p class="login">Already have an account? <a href="">Log in</a></p>
         </div>
       </div>
